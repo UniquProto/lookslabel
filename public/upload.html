@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Upload Files</title>
+		<style>
+			form {
+				margin: auto;
+				width: 80%;
+				height: 30%;
+				border: 3px solid green;
+				padding: 10px;
+			}
+			button {
+				margin: 0 auto;
+				background-color: rgb(33, 141, 33);
+				color: whitesmoke;
+				border-color: none;
+			}
+			input {
+				padding-block: 10%;
+			}
+		</style>
+	</head>
+	<body>
+		<form action="/api/upload" method="post" enctype="multipart/form-data">
+			<label for="upload">Upload Images</label>
+			<input
+				type="file"
+				accept="image/*"
+				id="upload"
+				name="uploads"
+				multiple
+				required
+			/>
+			<br />
+			<br />
+
+			<label for="landmark">Landmark</label>
+			<input
+				type="text"
+				name="landmark"
+				placeholder="eg. lake gardens"
+				required
+				id="landmark"
+			/>
+			<br />
+			<br />
+
+			<label for="price">Price</label>
+
+			<select id="price" name="price">
+				<option value="149">149</option>
+				<option value="249">249</option>
+				<option value="499">499</option>
+				<option value="999">999</option>
+				<option value="999">999</option>
+				<option value="1499">1499</option>
+			</select>
+			<br />
+			<br />
+
+			<label for="time">(date and time)</label>
+			<input type="datetime-local" id="time" name="time" />
+
+			<br />
+			<br />
+
+			<label class="location">
+				<input type="radio" name="location" value="Indoor" /> Indoor<br />
+				<input type="radio" name="location" value="Outdoor" /> Outdoor<br />
+			</label>
+
+			<br />
+			<br />
+
+			<button type="submit">Upload</button>
+		</form>
+	</body>
+</html>

@@ -1,1 +1,8 @@
-node_modules
+node_modules/
+.env
+tmp/
+
+Procfile
+UpNext
+spring-internship-firebase-adminsdk-7z0b1-ad7d9b5ea2.
+.gcloudignore

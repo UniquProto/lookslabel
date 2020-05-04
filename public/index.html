@@ -1,24 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <title>Document</title>
-  </head>
-  <body>
-    <h1>Data Selfie App</h1>
-    <div><a href="/">enter</a> | <a href="/logs">list</a></div>
-    <p>
-      latitude: <span id="latitude"></span>&deg;<br />
-      longitude: <span id="longitude"></span>&deg;
-    </p>
-    <label for="mood">enter your mood</label>
-    <input id="landmark" value="" placeholder= "eg Sobha baxzar metro" />
-    <button id="submit">submit</button>
-    <script src="sketch.js"></script>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-auth.js"></script>
+		<script src="./auth.js"></script>
+		<script src="sketch.js"></script>
+
+		<title>Document</title>
+	</head>
+	<body>
+		<h1>Data Selfie App</h1>
+		<div>
+			<a href="index.html">Cam</a> |
+			<a href="./logs/index.html">Webcam Photos</a> |
+			<a href="./upload.html">Upload Photos</a> |
+			<button onclick="logOut()">Log Out</button>
+		</div>
+		<p>
+			latitude: <span id="latitude"></span>&deg;<br />
+			longitude: <span id="longitude"></span>&deg;
+		</p>
+		<label for="landmark"> Landmark</label>
+		<input id="landmark" value="" placeholder="eg Sobha baxzar metro" />
+
+		<button id="submit">submit</button>
+	</body>
 </html>

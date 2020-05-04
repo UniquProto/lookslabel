@@ -1,17 +1,30 @@
 # lookslabel
 
-Index.js :                                           Node JS server code.
+Index.js : Node JS server code.
 
-/public/index.html:                                  Captures Users latitude & longitude & selfi & landmark.
 
-/public/logs/index.html:                             Logs lattitude longitude and Captured Image with time stamp.
+## UPDATE
 
-/Sketch.js:                                          Relevent javascript for Capturing lat & lon and image and timestamp.
+- Uploads data to fireStore
+- main DB is firestore now
+- Images gets stored in cloud storage
+- New Update: Server Functionality completed!
 
-/public/logs/logs.js:                                Retrives data from Database.db to show on /logs/index.html.
+## ROUTES & THERE FUNCTIONS
 
-Database.db:                                         Stored data using NEDB,{Lat, long ,"landmark",Image}/*lat,lon,"landmark" as string and                         
+`/api/profile` 
+- Creates Profile upon authentication &  Sets profile id(uid)
 
-                                                     image as Base64/*
+`/api/webcam`
+ - GET protocol gives you data of webcam clicked photos
 
-Style.css:                                           Contais dummy CSS Designs for Index.html 
+-POST protocol stores images to storage and logs it into database(Firestore)
+
+`/api/upload` 
+- Module uses Form Data to upload pictures and other fields.
+- Form data can carry a payload (10mb limit) which save files to storage and logs it to database.
+- Returns json data 
+  
+## Q&A
+- How to emulate firebase in your local server?
+ans. firebase serve --only functions,hosting
